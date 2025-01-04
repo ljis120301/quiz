@@ -1,0 +1,44 @@
+{
+  "quizzes": {
+    "general-knowledge": {
+      "title": "General Knowledge",
+      "questions": [
+        {
+          "questionText": "What is the capital of France?",
+          "options": ["London", "Berlin", "Paris", "Madrid"],
+          "correctAnswer": "Paris"
+        },
+        {
+          "questionText": "Which planet is known as the Red Planet?",
+          "options": ["Jupiter", "Mars", "Venus", "Saturn"],
+          "correctAnswer": "Mars"
+        },
+        {
+          "questionText": "Who painted the Mona Lisa?",
+          "options": ["Van Gogh", "Da Vinci", "Picasso", "Rembrandt"],
+          "correctAnswer": "Da Vinci"
+        },
+        {
+          "questionText": "What is the largest mammal in the world?",
+          "options": ["African Elephant", "Blue Whale", "Giraffe", "Hippopotamus"],
+          "correctAnswer": "Blue Whale"
+        }
+      ]
+    },
+    "science": {
+      "title": "Science",
+      "questions": [
+        {
+          "questionText": "What is the capital of France?",
+          "options": ["London", "Berlin", "Paris", "Madrid"],
+          "correctAnswer": "Paris"
+        },
+        {
+          "questionText": "What is the capital of France?",
+          "options": ["London", "Berlin", "Paris", "Madrid"],
+          "correctAnswer": "Paris"
+        }
+      ]
+    }
+  }
+} 
