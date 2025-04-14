@@ -37,7 +37,7 @@ export default function Home() {
 
     return (
       <div className="p-8 dark:bg-surface0">
-      <h2 className="text-2xl font-semibold text-black dark:text-white mb-6">Available Quizzes</h2>
+      <h2 className="text-2xl font-semibold text-black dark:text-frappe-text mb-6">Available Quizzes</h2>
       {/* Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {quizzes.map((quiz) => (
