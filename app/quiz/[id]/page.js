@@ -1,9 +1,10 @@
 import Quiz from '@/app/components/Quiz';
 
 export default async function QuizPage({ params }) {
+  const { id } = await params;
   return (
     <div className="p-6">
-      <Quiz quizId={await params.id} />
+      <Quiz quizId={id} />
     </div>
   );
 } 

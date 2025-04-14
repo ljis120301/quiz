@@ -1,0 +1,119 @@
+{
+  "id": "network-plus",
+  "title": "CompTIA Network+ N10-009 Practice Quiz",
+  "description": "Test your knowledge of networking concepts covered in the CompTIA Network+ N10-009 exam",
+  "difficulty": "Hard",
+  "icon": "🌐",
+  "questions": [
+    {
+      "questionText": "Which of the following is a private IPv4 address range?",
+      "options": [
+        "10.0.0.0 - 10.255.255.255",
+        "172.16.0.0 - 172.31.255.255",
+        "192.168.0.0 - 192.168.255.255",
+        "All of the above"
+      ],
+      "correctAnswer": "All of the above",
+      "explanation": "All of these are private IPv4 address ranges as defined by RFC 1918."
+    },
+    {
+      "questionText": "What is the purpose of a subnet mask?",
+      "options": [
+        "To identify the network portion of an IP address",
+        "To determine the broadcast address",
+        "To identify the host portion of an IP address",
+        "To encrypt network traffic"
+      ],
+      "correctAnswer": "To identify the network portion of an IP address",
+      "explanation": "A subnet mask is used to identify which portion of an IP address represents the network and which portion represents the host."
+    },
+    {
+      "questionText": "Which protocol is used to automatically assign IP addresses to devices on a network?",
+      "options": [
+        "DNS",
+        "DHCP",
+        "SNMP",
+        "FTP"
+      ],
+      "correctAnswer": "DHCP",
+      "explanation": "DHCP (Dynamic Host Configuration Protocol) is used to automatically assign IP addresses to devices on a network."
+    },
+    {
+      "questionText": "What is the primary purpose of a VLAN?",
+      "options": [
+        "To increase network speed",
+        "To create separate broadcast domains",
+        "To encrypt network traffic",
+        "To provide wireless access"
+      ],
+      "correctAnswer": "To create separate broadcast domains",
+      "explanation": "VLANs (Virtual Local Area Networks) are used to create separate broadcast domains within a single physical network."
+    },
+    {
+      "questionText": "Which of the following is a characteristic of a Layer 2 switch?",
+      "options": [
+        "Makes forwarding decisions based on IP addresses",
+        "Makes forwarding decisions based on MAC addresses",
+        "Provides routing between networks",
+        "Filters traffic based on port numbers"
+      ],
+      "correctAnswer": "Makes forwarding decisions based on MAC addresses",
+      "explanation": "Layer 2 switches make forwarding decisions based on MAC addresses and operate at the Data Link layer of the OSI model."
+    },
+    {
+      "questionText": "What is the purpose of ARP?",
+      "options": [
+        "To resolve IP addresses to MAC addresses",
+        "To resolve domain names to IP addresses",
+        "To encrypt network traffic",
+        "To manage network bandwidth"
+      ],
+      "correctAnswer": "To resolve IP addresses to MAC addresses",
+      "explanation": "ARP (Address Resolution Protocol) is used to resolve IP addresses to MAC addresses on a local network."
+    },
+    {
+      "questionText": "Which port number is used by HTTPS?",
+      "options": [
+        "80",
+        "443",
+        "22",
+        "53"
+      ],
+      "correctAnswer": "443",
+      "explanation": "HTTPS uses port 443 for secure web communication."
+    },
+    {
+      "questionText": "What is the purpose of a firewall?",
+      "options": [
+        "To prevent unauthorized access to a network",
+        "To increase network speed",
+        "To assign IP addresses",
+        "To provide wireless access"
+      ],
+      "correctAnswer": "To prevent unauthorized access to a network",
+      "explanation": "A firewall is a security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules."
+    },
+    {
+      "questionText": "Which wireless encryption standard is considered the most secure?",
+      "options": [
+        "WEP",
+        "WPA",
+        "WPA2",
+        "WPA3"
+      ],
+      "correctAnswer": "WPA3",
+      "explanation": "WPA3 is currently the most secure wireless encryption standard, offering improved security features over previous versions."
+    },
+    {
+      "questionText": "What is the purpose of a DNS server?",
+      "options": [
+        "To assign IP addresses",
+        "To resolve domain names to IP addresses",
+        "To encrypt network traffic",
+        "To manage network bandwidth"
+      ],
+      "correctAnswer": "To resolve domain names to IP addresses",
+      "explanation": "DNS (Domain Name System) servers are used to resolve human-readable domain names to IP addresses."
+    }
+  ]
+} 
