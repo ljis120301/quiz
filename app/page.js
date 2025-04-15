@@ -27,6 +27,7 @@ export default function Home() {
 
   if (loading) {
     return (
+      // loading spinner
       <div className="p-8">
         <div className="flex items-center justify-center">
           <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>

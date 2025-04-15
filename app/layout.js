@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from './components/ThemeProvider';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,26 +18,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} font-sans antialiased bg-background text-text`}
+        className={`${inter.variable} font-sans antialiased bg-background text-text min-h-screen flex flex-col`}
+        suppressHydrationWarning
       >
         <ThemeProvider>
           <Header />
           
           {/* Main Content */}
-          <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-            <div className="bg-surface rounded-lg shadow-sm ">
+          <main className="flex-1 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+            <div className="bg-surface rounded-lg shadow-sm">
               {children}
             </div>
           </main>
 
-          {/* Footer */}
-          <footer className="mt-auto py-6">
-            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-              <p className="text-center text-sm text-subtext">
-                © {new Date().getFullYear()} Quiz App. All rights reserved.
-              </p>
-            </div>
-          </footer>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
