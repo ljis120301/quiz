@@ -28,6 +28,7 @@ export default function Quiz({ quizId }) {
   const [score, setScore] = useState(0);
   const [showScore, setShowScore] = useState(false);
   const [questions, setQuestions] = useState([]);
+  const [userAnswers, setUserAnswers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [quizTitle, setQuizTitle] = useState('');
   const [questionCount, setQuestionCount] = useState(0);
@@ -118,6 +119,13 @@ export default function Quiz({ quizId }) {
   }, [showScore]);
 
   const handleAnswerClick = (selectedAnswer) => {
+    // Store the user's answer
+    setUserAnswers([...userAnswers, {
+      questionIndex: currentQuestion,
+      selectedAnswer,
+      isCorrect: selectedAnswer === questions[currentQuestion].correctAnswer
+    }]);
+
     if (selectedAnswer === questions[currentQuestion].correctAnswer) {
       setScore(score + 1);
     }
@@ -169,8 +177,8 @@ export default function Quiz({ quizId }) {
       </AlertDialog>
 
       {showScore ? (
-        <div className="bg-surface dark:bg-frappe-surface0 rounded-2xl shadow-xl p-8 text-center">
-          <div className="mb-6">
+        <div className="bg-surface dark:bg-frappe-surface0 rounded-2xl shadow-xl p-8">
+          <div className="text-center mb-6">
             <span className="text-5xl mb-4">🎉</span>
             <h2 className="text-3xl font-bold text-primary dark:text-frappe-blue mb-4">Quiz Complete!</h2>
             <div className="space-y-2">
@@ -185,19 +193,49 @@ export default function Quiz({ quizId }) {
               </p>
             </div>
           </div>
-          <button
-            className="px-6 py-3 bg-[#8caaee] text-[#232634] rounded-full font-semibold shadow-lg 
-                      hover:bg-[#7a8cba] transform hover:-translate-y-0.5 transition-all
-                      dark:bg-frappe-blue dark:text-frappe-base dark:hover:bg-frappe-overlay0"
-            onClick={() => {
-              setCurrentQuestion(0);
-              setScore(0);
-              setShowScore(false);
-              setAnsweredQuestions(0);
-            }}
-          >
-            Try Again 🔄
-          </button>
+
+          {/* Add missed questions section */}
+          {score < questions.length && (
+            <div className="mt-8 border-t border-gray-200 dark:border-frappe-surface1 pt-6">
+              <h3 className="text-xl font-semibold text-text dark:text-frappe-text mb-4">Questions to Review</h3>
+              <div className="space-y-4">
+                {userAnswers
+                  .filter(answer => !answer.isCorrect)
+                  .map((answer, index) => (
+                    <div key={index} className="bg-gray-50 dark:bg-frappe-surface1 p-4 rounded-lg">
+                      <p className="font-medium text-text dark:text-frappe-text mb-2">
+                        {questions[answer.questionIndex].questionText}
+                      </p>
+                      <div className="space-y-2">
+                        <p className="text-sm text-red-500 dark:text-frappe-red">
+                          Your answer: {answer.selectedAnswer}
+                        </p>
+                        <p className="text-sm text-green-500 dark:text-frappe-green">
+                          Correct answer: {questions[answer.questionIndex].correctAnswer}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          )}
+
+          <div className="mt-8 text-center">
+            <button
+              className="px-6 py-3 bg-[#8caaee] text-[#232634] rounded-full font-semibold shadow-lg 
+                        hover:bg-[#7a8cba] transform hover:-translate-y-0.5 transition-all
+                        dark:bg-frappe-blue dark:text-frappe-base dark:hover:bg-frappe-overlay0"
+              onClick={() => {
+                setCurrentQuestion(0);
+                setScore(0);
+                setShowScore(false);
+                setAnsweredQuestions(0);
+                setUserAnswers([]); // Reset user answers
+              }}
+            >
+              Try Again 🔄
+            </button>
+          </div>
         </div>
       ) : (
         <div className="bg-surface dark:bg-frappe-surface0 rounded-2xl shadow-xl p-8">
