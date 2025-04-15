@@ -9,25 +9,37 @@ export default function Header() {
   const pathname = usePathname();
   const isQuizPage = pathname?.startsWith('/quiz/');
   const [isQuizCompleted, setIsQuizCompleted] = useState(false);
+  const [hasProgress, setHasProgress] = useState(false);
+
+  // Reset quiz state when navigating to a new quiz
+  useEffect(() => {
+    if (isQuizPage) {
+      setIsQuizCompleted(false);
+      setHasProgress(false);
+    }
+  }, [pathname]);
 
   useEffect(() => {
+    const handleQuizProgress = (e) => {
+      setHasProgress(e.detail > 0);
+    };
+
     const handleQuizCompleted = () => {
       setIsQuizCompleted(true);
     };
 
+    window.addEventListener('quizProgress', handleQuizProgress);
     window.addEventListener('quizCompleted', handleQuizCompleted);
 
     return () => {
+      window.removeEventListener('quizProgress', handleQuizProgress);
       window.removeEventListener('quizCompleted', handleQuizCompleted);
     };
   }, []);
 
   const handleNavigation = (e) => {
-    console.log('Header: Navigation attempted', { isQuizPage, isQuizCompleted });
-    if (isQuizPage && !isQuizCompleted) {
+    if (isQuizPage && !isQuizCompleted && hasProgress) {
       e.preventDefault();
-      console.log('Header: Dispatching quizNavigationAttempt event');
-      // Create and dispatch the custom event
       const event = new CustomEvent('quizNavigationAttempt', {
         detail: e.currentTarget.href,
         bubbles: true,
@@ -35,6 +47,7 @@ export default function Header() {
       });
       window.dispatchEvent(event);
     }
+    // If there's no progress, let the navigation happen naturally
   };
 
   return (

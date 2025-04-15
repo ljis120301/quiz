@@ -64,60 +64,39 @@ export default function Quiz({ quizId }) {
     }
   }, [quizId]);
 
+  // Handle navigation events
   useEffect(() => {
     const handleQuizNavigation = (e) => {
-      console.log('Quiz: Navigation attempt received', { 
-        answeredQuestions, 
-        showScore, 
-        targetUrl: e.detail 
-      });
+      // Only show warning if there's progress to lose
       if (answeredQuestions > 0 && !showScore) {
         e.preventDefault();
-        console.log('Quiz: Showing leave dialog');
         setTargetUrl(e.detail);
         setShowLeaveDialog(true);
       }
+      // If no progress, don't prevent the default navigation
     };
 
-    console.log('Quiz: Setting up event listener');
-    window.addEventListener('quizNavigationAttempt', handleQuizNavigation);
-
+    window.addEventListener('quizNavigationAttempt', handleQuizNavigation, { capture: true });
     return () => {
-      console.log('Quiz: Cleaning up event listener');
-      window.removeEventListener('quizNavigationAttempt', handleQuizNavigation);
+      window.removeEventListener('quizNavigationAttempt', handleQuizNavigation, { capture: true });
     };
   }, [answeredQuestions, showScore]);
 
-  useEffect(() => {
-    console.log('Quiz: State updated', { 
-      answeredQuestions, 
-      showScore, 
-      showLeaveDialog 
-    });
-  }, [answeredQuestions, showScore, showLeaveDialog]);
-
-  useEffect(() => {
-    if (showScore) {
-      window.dispatchEvent(new CustomEvent('quizCompleted'));
-    }
-  }, [showScore]);
-
+  // Handle navigation attempts
   const handleNavigation = (e, href) => {
+    // Only show warning if there's progress to lose
     if (answeredQuestions > 0 && !showScore) {
       e.preventDefault();
       setTargetUrl(href);
       setShowLeaveDialog(true);
     }
+    // If no progress, let the navigation happen naturally
   };
 
-  const handleConfirmLeave = () => {
-    router.push(targetUrl);
-  };
-
-  // Add beforeunload handler
+  // Handle browser/tab closing
   useEffect(() => {
     const handleBeforeUnload = (e) => {
-      if (!showScore) {
+      if (answeredQuestions > 0 && !showScore) {
         e.preventDefault();
         e.returnValue = '';
         return '';
@@ -126,6 +105,16 @@ export default function Quiz({ quizId }) {
 
     window.addEventListener('beforeunload', handleBeforeUnload);
     return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, [answeredQuestions, showScore]);
+
+  const handleConfirmLeave = () => {
+    router.push(targetUrl);
+  };
+
+  useEffect(() => {
+    if (showScore) {
+      window.dispatchEvent(new CustomEvent('quizCompleted'));
+    }
   }, [showScore]);
 
   const handleAnswerClick = (selectedAnswer) => {
@@ -133,7 +122,14 @@ export default function Quiz({ quizId }) {
       setScore(score + 1);
     }
 
-    setAnsweredQuestions(answeredQuestions + 1);
+    const newAnsweredQuestions = answeredQuestions + 1;
+    setAnsweredQuestions(newAnsweredQuestions);
+    
+    // Dispatch progress event
+    window.dispatchEvent(new CustomEvent('quizProgress', {
+      detail: newAnsweredQuestions
+    }));
+
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);

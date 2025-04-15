@@ -1,4 +1,45 @@
+'use client'
+
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
+
 export default function Footer() {
+  const pathname = usePathname();
+  const isQuizPage = pathname?.startsWith('/quiz/');
+  const [isQuizCompleted, setIsQuizCompleted] = useState(false);
+  const [hasProgress, setHasProgress] = useState(false);
+
+  useEffect(() => {
+    const handleQuizProgress = (e) => {
+      setHasProgress(e.detail > 0);
+    };
+
+    const handleQuizCompleted = () => {
+      setIsQuizCompleted(true);
+    };
+
+    window.addEventListener('quizProgress', handleQuizProgress);
+    window.addEventListener('quizCompleted', handleQuizCompleted);
+
+    return () => {
+      window.removeEventListener('quizProgress', handleQuizProgress);
+      window.removeEventListener('quizCompleted', handleQuizCompleted);
+    };
+  }, []);
+
+  const handleNavigation = (e) => {
+    if (isQuizPage && !isQuizCompleted && hasProgress) {
+      e.preventDefault();
+      const event = new CustomEvent('quizNavigationAttempt', {
+        detail: e.currentTarget.href,
+        bubbles: true,
+        cancelable: true
+      });
+      window.dispatchEvent(event);
+    }
+  };
+
   return (
     <footer className="w-full py-8 bg-white dark:bg-frappe-surface0/50 border-t border-gray-100 dark:border-frappe-surface1">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,19 +55,31 @@ export default function Footer() {
             <h3 className="text-gray-800 dark:text-frappe-text font-semibold">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="/" className="text-gray-500 hover:text-gray-700 dark:text-frappe-subtext0 dark:hover:text-frappe-text transition-colors">
+                <Link 
+                  href="/" 
+                  onClick={handleNavigation}
+                  className="text-gray-500 hover:text-gray-700 dark:text-frappe-subtext0 dark:hover:text-frappe-text transition-colors"
+                >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/quizzes" className="text-gray-500 hover:text-gray-700 dark:text-frappe-subtext0 dark:hover:text-frappe-text transition-colors">
+                <Link 
+                  href="/quizzes" 
+                  onClick={handleNavigation}
+                  className="text-gray-500 hover:text-gray-700 dark:text-frappe-subtext0 dark:hover:text-frappe-text transition-colors"
+                >
                   Browse Quizzes
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/about" className="text-gray-500 hover:text-gray-700 dark:text-frappe-subtext0 dark:hover:text-frappe-text transition-colors">
+                <Link 
+                  href="/about" 
+                  onClick={handleNavigation}
+                  className="text-gray-500 hover:text-gray-700 dark:text-frappe-subtext0 dark:hover:text-frappe-text transition-colors"
+                >
                   About
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
