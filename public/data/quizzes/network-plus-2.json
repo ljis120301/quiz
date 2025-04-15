@@ -1,0 +1,340 @@
+{
+    "id": "network-plus-2",
+    "title": "CompTIA Network+ N10-009 Practice Quiz 2",
+    "description": "Test your knowledge of advanced networking concepts from the CompTIA Network+ N10-009 exam.",
+    "difficulty": "Hard",
+    "icon": "🌐",
+    "questions": [
+      {
+        "questionText": "Which SDN plane is responsible for managing routing tables and session information?",
+        "options": [
+          "Data Plane",
+          "Control Plane",
+          "Application Plane",
+          "Infrastructure Plane"
+        ],
+        "correctAnswer": "Control Plane",
+        "explanation": "The Control Plane manages routing, session tables, and dynamic protocol updates in Software Defined Networking."
+      },
+      {
+        "questionText": "Which protocol would most likely be used to build a secure, encrypted site-to-site VPN between branch offices?",
+        "options": [
+          "GRE",
+          "IPSec with ESP",
+          "ISAKMP over UDP 161",
+          "L2TP without encryption"
+        ],
+        "correctAnswer": "IPSec with ESP",
+        "explanation": "IPSec with ESP provides both encryption and integrity, making it suitable for secure VPN tunnels."
+      },
+      {
+        "questionText": "A network technician is using Seven Second Subnetting and sees a subnet mask of 255.255.255.224. What is the magic number and how many usable hosts does it provide?",
+        "options": [
+          "Magic number: 32, Usable hosts: 30",
+          "Magic number: 64, Usable hosts: 62",
+          "Magic number: 224, Usable hosts: 254",
+          "Magic number: 16, Usable hosts: 14"
+        ],
+        "correctAnswer": "Magic number: 32, Usable hosts: 30",
+        "explanation": "255.255.255.224 = /27; magic number is 32, and 2^5 - 2 = 30 usable hosts."
+      },
+      {
+        "questionText": "Which of the following protocols encapsulates data to tunnel it over an IP network, but provides no built-in encryption?",
+        "options": [
+          "IPSec",
+          "GRE",
+          "L2TP with IPsec",
+          "SSL VPN"
+        ],
+        "correctAnswer": "GRE",
+        "explanation": "GRE (Generic Routing Encapsulation) tunnels traffic but does not encrypt it."
+      },
+      {
+        "questionText": "What is the function of a QSFP+ transceiver in a modern network?",
+        "options": [
+          "Provides 1 Gbit/s over fiber",
+          "Combines four 10 Gbit/s links into one transceiver for 40 Gbit/s total",
+          "Provides 16 Gbit/s over copper",
+          "Connects storage devices using block-level access"
+        ],
+        "correctAnswer": "Combines four 10 Gbit/s links into one transceiver for 40 Gbit/s total",
+        "explanation": "QSFP+ supports four 10 Gbit/s channels, delivering up to 40 Gbit/s total bandwidth."
+      },
+      {
+        "questionText": "In a collapsed core network architecture, which of the following is a key trade-off?",
+        "options": [
+          "Increased complexity but more scalability",
+          "Reduced redundancy but simplified deployment",
+          "Separate core and distribution layers for improved isolation",
+          "High availability with separate routing and switching"
+        ],
+        "correctAnswer": "Reduced redundancy but simplified deployment",
+        "explanation": "Collapsed core merges the core and distribution layers to save cost and simplify design, but sacrifices some redundancy."
+      },
+      {
+        "questionText": "Which of the following is a key distinction between NAS and SAN?",
+        "options": [
+          "NAS uses block-level access, SAN uses file-level access",
+          "SAN uses block-level access, NAS uses file-level access",
+          "Both NAS and SAN are accessed using CIFS",
+          "NAS is exclusive to Windows systems"
+        ],
+        "correctAnswer": "SAN uses block-level access, NAS uses file-level access",
+        "explanation": "NAS shares files over the network using file-level protocols, while SAN provides block-level storage for direct access."
+      },
+      {
+        "questionText": "Which wireless encryption method offers forward secrecy and individualized encryption for each session?",
+        "options": [
+          "WEP",
+          "WPA2-PSK",
+          "WPA3-SAE",
+          "TKIP"
+        ],
+        "correctAnswer": "WPA3-SAE",
+        "explanation": "WPA3-SAE (Simultaneous Authentication of Equals) offers improved security with forward secrecy and individualized encryption."
+      },
+      {
+        "questionText": "Which feature of VXLAN enables it to support significantly more logical networks than VLAN?",
+        "options": [
+          "IPv6 multicast support",
+          "Layer 4 encapsulation",
+          "24-bit segment ID",
+          "Use of fiber over copper"
+        ],
+        "correctAnswer": "24-bit segment ID",
+        "explanation": "VXLAN uses a 24-bit segment ID allowing for over 16 million logical networks, compared to 4096 in VLAN."
+      },
+      {
+        "questionText": "Why might a DNS TTL of 86400 be problematic in a fast-changing web environment?",
+        "options": [
+          "It slows down user connections",
+          "It limits encryption strength",
+          "It causes changes to IP address mappings to take up to 24 hours to propagate",
+          "It increases the number of DNS queries"
+        ],
+        "correctAnswer": "It causes changes to IP address mappings to take up to 24 hours to propagate",
+        "explanation": "TTL defines how long DNS responses are cached. A value of 86400 seconds (24 hours) delays DNS updates significantly."
+      },
+      {
+        "questionText": "In an IPsec VPN configuration, what function does the Internet Key Exchange (IKE) Phase 1 serve?",
+        "options": [
+          "Transmits encryption keys directly to the peer",
+          "Establishes the ESP header for packet encryption",
+          "Builds a secure channel for negotiating encryption keys",
+          "Authenticates the user to the VPN concentrator"
+        ],
+        "correctAnswer": "Builds a secure channel for negotiating encryption keys",
+        "explanation": "IKE Phase 1 establishes a secure channel using Diffie-Hellman to negotiate encryption keys without transmitting them directly."
+      },
+      {
+        "questionText": "What is the primary difference between IPsec tunnel mode and transport mode?",
+        "options": [
+          "Tunnel mode encrypts only the payload; transport mode encrypts the entire packet",
+          "Transport mode adds a new IP header; tunnel mode keeps the original",
+          "Tunnel mode encrypts the entire packet including headers; transport mode only encrypts the payload",
+          "Transport mode is used for VPNs; tunnel mode is used for LAN communication"
+        ],
+        "correctAnswer": "Tunnel mode encrypts the entire packet including headers; transport mode only encrypts the payload",
+        "explanation": "Tunnel mode adds a new IP header and encrypts the entire original packet; transport mode leaves the IP header intact and only encrypts the payload."
+      },
+      {
+        "questionText": "Which routing protocol uses 'cost' as a metric and is designed to operate within a single autonomous system?",
+        "options": [
+          "EIGRP",
+          "BGP",
+          "OSPF",
+          "RIP"
+        ],
+        "correctAnswer": "OSPF",
+        "explanation": "OSPF (Open Shortest Path First) uses a cost metric based on bandwidth and operates within a single AS as a link-state protocol."
+      },
+      {
+        "questionText": "What does the 'magic number' represent when using magic number subnetting?",
+        "options": [
+          "The number of available host addresses",
+          "The CIDR prefix length",
+          "The interval between subnets in an octet",
+          "The default gateway address"
+        ],
+        "correctAnswer": "The interval between subnets in an octet",
+        "explanation": "The magic number is the increment value between subnet ranges, calculated as 256 minus the subnet mask's interesting octet."
+      },
+      {
+        "questionText": "Why is the administrative distance important in dynamic routing?",
+        "options": [
+          "It determines the most efficient path within the same protocol",
+          "It prioritizes between routes discovered by different protocols",
+          "It measures the latency of each path",
+          "It calculates the maximum hop count for a route"
+        ],
+        "correctAnswer": "It prioritizes between routes discovered by different protocols",
+        "explanation": "Administrative distance is used to choose between conflicting routes provided by different routing protocols based on trustworthiness."
+      },
+      {
+        "questionText": "Which address type is used in IPv6 to reach the closest instance of a service from multiple endpoints with the same address?",
+        "options": [
+          "Unicast",
+          "Broadcast",
+          "Multicast",
+          "Anycast"
+        ],
+        "correctAnswer": "Anycast",
+        "explanation": "Anycast allows multiple hosts to share the same address, and data is delivered to the nearest one based on routing metrics."
+      },
+      {
+        "questionText": "In which scenario would you most likely use VLSM (Variable Length Subnet Masking)?",
+        "options": [
+          "When every subnet needs an equal number of hosts",
+          "To avoid NAT translation in IPv4 networks",
+          "When subnetting networks of different sizes from a single block",
+          "To migrate from IPv4 to IPv6"
+        ],
+        "correctAnswer": "When subnetting networks of different sizes from a single block",
+        "explanation": "VLSM allows subnetting a large network into variable-sized subnets, optimizing address allocation."
+      },
+      {
+        "questionText": "Which type of network access control uses IEEE 802.1X for authentication?",
+        "options": [
+          "MAC filtering",
+          "Pre-shared keys",
+          "Port-based network access control",
+          "Firewall rules"
+        ],
+        "correctAnswer": "Port-based network access control",
+        "explanation": "IEEE 802.1X is a port-based NAC method requiring authentication before allowing access to the network."
+      },
+      {
+        "questionText": "Which of the following DNS record types is responsible for specifying the authoritative name server for a domain?",
+        "options": [
+          "A",
+          "NS",
+          "MX",
+          "CNAME"
+        ],
+        "correctAnswer": "NS",
+        "explanation": "NS (Name Server) records indicate the authoritative DNS server for the domain."
+      },
+      {
+        "questionText": "What type of firewall rule set behavior assumes all traffic is denied unless explicitly allowed?",
+        "options": [
+          "Stateful inspection",
+          "Explicit deny",
+          "Whitelist mode",
+          "Implicit deny"
+        ],
+        "correctAnswer": "Implicit deny",
+        "explanation": "Most firewalls end with an implicit deny rule, blocking all traffic unless a preceding rule allows it."
+      },
+      {
+        "questionText": "Which wireless technology provides simultaneous dual-band support and uses beamforming for better performance?",
+        "options": [
+          "802.11n",
+          "802.11ac",
+          "802.11g",
+          "802.11a"
+        ],
+        "correctAnswer": "802.11ac",
+        "explanation": "802.11ac supports simultaneous dual-band operation and beamforming to improve performance and range."
+      },
+      {
+        "questionText": "Why is GRE often paired with IPsec in enterprise environments?",
+        "options": [
+          "IPsec does not support multicast traffic",
+          "GRE provides encryption while IPsec does not",
+          "GRE reduces routing overhead",
+          "GRE enables web-based VPN connections"
+        ],
+        "correctAnswer": "IPsec does not support multicast traffic",
+        "explanation": "IPsec doesn't support multicast, so GRE is used to encapsulate multicast traffic over the tunnel, with IPsec providing encryption."
+      },
+      {
+        "questionText": "In SDN, which plane is responsible for SSH and API-based configuration of devices?",
+        "options": [
+          "Control Plane",
+          "Data Plane",
+          "Infrastructure Plane",
+          "Management Plane"
+        ],
+        "correctAnswer": "Management Plane",
+        "explanation": "The Management Plane allows administrative configuration and control via interfaces like SSH and APIs."
+      },
+      {
+        "questionText": "What makes VXLAN more scalable than VLANs for large cloud environments?",
+        "options": [
+          "VXLAN is encrypted by default",
+          "VXLAN uses 32-bit tags",
+          "VXLAN supports over 16 million network segments",
+          "VXLAN uses less bandwidth than VLANs"
+        ],
+        "correctAnswer": "VXLAN supports over 16 million network segments",
+        "explanation": "VXLAN uses a 24-bit segment ID (VSID), supporting over 16 million logical networks, compared to VLAN's 4,096 limit."
+      },
+      {
+        "questionText": "Which IPv6 tunneling method embeds an IPv4 address into an IPv6 address to allow transition between protocols?",
+        "options": [
+          "NAT64",
+          "4in6",
+          "6to4",
+          "Dual-stack"
+        ],
+        "correctAnswer": "6to4",
+        "explanation": "6to4 automatically generates an IPv6 address using the device's IPv4 address and allows IPv6 packets to be routed over IPv4."
+      },
+      {
+        "questionText": "What does the term 'zero trust' imply in modern network security architecture?",
+        "options": [
+          "Users are authenticated once per session",
+          "All traffic is considered untrusted by default",
+          "Trusted networks are given full access",
+          "VPNs are not required inside the LAN"
+        ],
+        "correctAnswer": "All traffic is considered untrusted by default",
+        "explanation": "Zero trust assumes no user or device is inherently trustworthy and requires continuous validation."
+      },
+      {
+        "questionText": "Which command-line tool is most appropriate to verify DNS resolution issues?",
+        "options": [
+          "ping",
+          "tracert",
+          "nslookup",
+          "ipconfig"
+        ],
+        "correctAnswer": "nslookup",
+        "explanation": "nslookup queries DNS servers to verify if names are resolving to the correct IP addresses."
+      },
+      {
+        "questionText": "Which protocol is used to securely transfer configuration files to a router using SSH?",
+        "options": [
+          "TFTP",
+          "SCP",
+          "FTP",
+          "SFTP"
+        ],
+        "correctAnswer": "SFTP",
+        "explanation": "SFTP (SSH File Transfer Protocol) provides secure file transfers over SSH, commonly used for router config files."
+      },
+      {
+        "questionText": "What is the purpose of TTL in an IP packet?",
+        "options": [
+          "To limit the lifetime of a DNS record",
+          "To track the time since packet creation",
+          "To prevent routing loops",
+          "To define encryption duration"
+        ],
+        "correctAnswer": "To prevent routing loops",
+        "explanation": "TTL (Time To Live) limits how many hops a packet can make, dropping it if the value reaches zero to avoid endless loops."
+      },
+      {
+        "questionText": "Which type of DNS record is responsible for defining an alias name to a canonical name?",
+        "options": [
+          "MX",
+          "PTR",
+          "A",
+          "CNAME"
+        ],
+        "correctAnswer": "CNAME",
+        "explanation": "CNAME records map one domain name to another, serving as an alias."
+      }
+    ]
+  }
+  
