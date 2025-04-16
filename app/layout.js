@@ -10,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Quiz App",
-  description: "Test your knowledge with our interactive quiz!",
+  title: "Net Quiz",
+  description: "Network focused quiz web app",
 };
 
 export default function RootLayout({ children }) {

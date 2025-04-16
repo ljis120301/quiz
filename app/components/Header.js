@@ -72,7 +72,7 @@ export default function Header() {
                 d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" 
               />
             </svg>
-            <h1 className="text-xl font-medium text-text">Quiz App</h1>
+            <h1 className="text-xl font-medium text-text">Net Quiz</h1>
           </Link>
           <ThemeToggle />
         </div>

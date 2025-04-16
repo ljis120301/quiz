@@ -1,0 +1,141 @@
+{
+  "id": "networkplus-advanced",
+  "title": "CompTIA Network+ Advanced Concepts",
+  "description": "Test your knowledge of advanced networking concepts from the CompTIA Network+ N10-009 exam, including SD-WAN, VLANs, complex router configurations, and subnetting",
+  "difficulty": "Hard",
+  "icon": "🌐",
+  "questions": [
+    {
+      "questionText": "A network administrator needs to implement a solution that allows for intelligent path selection across multiple WAN connections based on application requirements. Which technology should be used?",
+      "options": [
+        "MPLS",
+        "SD-WAN",
+        "BGP",
+        "OSPF"
+      ],
+      "correctAnswer": "SD-WAN",
+      "explanation": "SD-WAN (Software-Defined Wide Area Network) provides intelligent path selection across multiple WAN connections based on application requirements, network conditions, and business policies."
+    },
+    {
+      "questionText": "In a campus network, you need to separate voice traffic from data traffic for quality of service purposes. Which of the following is the MOST appropriate solution?",
+      "options": [
+        "Create a separate physical network for voice traffic",
+        "Implement VLANs to logically separate the traffic",
+        "Use NAT to separate the two traffic types",
+        "Deploy a proxy server between voice and data networks"
+      ],
+      "correctAnswer": "Implement VLANs to logically separate the traffic",
+      "explanation": "VLANs (Virtual LANs) allow you to logically separate different types of traffic on the same physical network. For voice traffic, this is typically done to ensure QoS (Quality of Service) by giving voice traffic priority over regular data traffic."
+    },
+    {
+      "questionText": "A company has a subnet with the address 192.168.10.0/24 and needs to create four equal-sized subnets. What will be the new subnet mask?",
+      "options": [
+        "255.255.255.192",
+        "255.255.255.224",
+        "255.255.255.240",
+        "255.255.255.248"
+      ],
+      "correctAnswer": "255.255.255.192",
+      "explanation": "To create 4 equal-sized subnets from a /24 network, you need to borrow 2 bits (2^2 = 4). This changes the subnet mask from /24 (255.255.255.0) to /26 (255.255.255.192)."
+    },
+    {
+      "questionText": "Which component of SD-WAN is responsible for making real-time routing decisions based on link performance metrics?",
+      "options": [
+        "SD-WAN orchestrator",
+        "SD-WAN controller",
+        "SD-WAN edge device",
+        "SD-WAN gateway"
+      ],
+      "correctAnswer": "SD-WAN edge device",
+      "explanation": "SD-WAN edge devices are deployed at branch locations and make real-time routing decisions based on link performance metrics such as latency, jitter, and packet loss. The controller provides policy configuration while the orchestrator manages the overall deployment."
+    },
+    {
+      "questionText": "A network administrator has configured VLAN 10 for the accounting department and VLAN 20 for the marketing department. Which protocol would be used to allow communication between these VLANs?",
+      "options": [
+        "STP",
+        "VTP",
+        "Inter-VLAN routing",
+        "VLAN trunking"
+      ],
+      "correctAnswer": "Inter-VLAN routing",
+      "explanation": "Inter-VLAN routing (also known as router-on-a-stick or layer 3 switching) is required for traffic to flow between different VLANs. Without inter-VLAN routing, devices in different VLANs cannot communicate with each other."
+    },
+    {
+      "questionText": "You have a network with IP address 172.16.0.0/16 and need to create subnets with at least 500 hosts each. What is the maximum subnet mask you can use?",
+      "options": [
+        "/22",
+        "/23",
+        "/24",
+        "/25"
+      ],
+      "correctAnswer": "/23",
+      "explanation": "For 500 hosts, you need at least 9 host bits (2^9 = 512). With a /16 network, using a /23 subnet mask gives you 7 network bits and 9 host bits, allowing 512 - 2 = 510 usable hosts per subnet."
+    },
+    {
+      "questionText": "Which of the following must be configured on both switches for a trunk link to function properly between them?",
+      "options": [
+        "Same native VLAN",
+        "Same VTP domain",
+        "Same spanning-tree priority",
+        "Same encapsulation protocol"
+      ],
+      "correctAnswer": "Same encapsulation protocol",
+      "explanation": "For a trunk link to function properly between two switches, they must use the same encapsulation protocol (such as 802.1Q or ISL). Mismatched encapsulation protocols will prevent proper VLAN tagging and trunk formation."
+    },
+    {
+      "questionText": "Which subnetting scheme would be MOST efficient for a network that needs exactly 5 subnets with approximately 25 hosts per subnet?",
+      "options": [
+        "192.168.1.0/24 with five /27 subnets",
+        "192.168.1.0/24 with five /28 subnets",
+        "192.168.1.0/24 with five /29 subnets",
+        "192.168.1.0/24 with five /26 subnets"
+      ],
+      "correctAnswer": "192.168.1.0/24 with five /27 subnets",
+      "explanation": "A /27 subnet provides 32 IP addresses (30 usable) which can accommodate 25 hosts with room for growth. This is more efficient than /26 (64 addresses) which would waste addresses, and /28 (16 addresses) which wouldn't provide enough for 25 hosts."
+    },
+    {
+      "questionText": "A network engineer needs to configure multiple routers to exchange routing information automatically. Which of the following is an example of a link-state routing protocol?",
+      "options": [
+        "RIP",
+        "BGP",
+        "OSPF",
+        "EIGRP"
+      ],
+      "correctAnswer": "OSPF",
+      "explanation": "OSPF (Open Shortest Path First) is a link-state routing protocol that builds a complete topology of the network. RIP is a distance-vector protocol, BGP is a path-vector protocol, and EIGRP is considered a hybrid (advanced distance-vector) protocol."
+    },
+    {
+      "questionText": "In a hierarchical network design, which layer is responsible for policy implementation and access control?",
+      "options": [
+        "Core layer",
+        "Distribution layer",
+        "Access layer",
+        "Transport layer"
+      ],
+      "correctAnswer": "Distribution layer",
+      "explanation": "In a hierarchical network design, the distribution layer (also called the aggregation layer) is responsible for policy implementation, access control, and routing between VLANs. The core layer focuses on fast transport, while the access layer connects end devices."
+    },
+    {
+      "questionText": "A company is implementing SD-WAN. Which of the following is NOT a typical benefit of SD-WAN?",
+      "options": [
+        "Reduced WAN costs",
+        "Application-aware routing",
+        "Centralized management",
+        "Increased physical security"
+      ],
+      "correctAnswer": "Increased physical security",
+      "explanation": "SD-WAN provides benefits such as reduced WAN costs, application-aware routing, and centralized management, but it does not inherently increase physical security. Physical security requires separate measures like secure facilities and access controls."
+    },
+    {
+      "questionText": "What is the broadcast address for the subnet 192.168.15.192/27?",
+      "options": [
+        "192.168.15.224",
+        "192.168.15.223",
+        "192.168.15.255",
+        "192.168.15.191"
+      ],
+      "correctAnswer": "192.168.15.223",
+      "explanation": "For 192.168.15.192/27, the subnet mask is 255.255.255.224, giving a subnet with range 192.168.15.192-192.168.15.223. The broadcast address is always the last address in the range: 192.168.15.223."
+    }
+  ]
+} 

@@ -1,0 +1,117 @@
+{
+  "id": "network-plus-study",
+  "title": "CompTIA Network+ N10-009 Quiz 3",
+  "description": "Advanced practice questions for the CompTIA Network+ N10-009 exam",
+  "difficulty": "Medium",
+  "icon": "🌐",
+  "questions": [
+    {
+      "questionText": "A network technician is troubleshooting a connectivity issue between two buildings connected via fiber. The link light is on at both ends but users cannot access resources. Using a protocol analyzer, the technician notices that frames are being received with errors. Which of the following is the MOST likely cause?",
+      "options": [
+        "Incorrect VLAN configuration",
+        "Incompatible fiber types (single-mode vs. multi-mode)",
+        "IP address conflict",
+        "Misconfigured default gateway"
+      ],
+      "correctAnswer": "Incompatible fiber types (single-mode vs. multi-mode)",
+      "explanation": "When the link light is on (indicating physical connectivity) but frames are being received with errors, it suggests a physical layer issue despite apparent connectivity. Incompatible fiber types (using single-mode fiber with multi-mode transceivers or vice versa) can cause this exact symptom where the link appears to be up but data cannot be properly transmitted."
+    },
+    {
+      "questionText": "Which of the following statements about STP (Spanning Tree Protocol) is FALSE?",
+      "options": [
+        "STP prevents broadcast storms in redundant network topologies",
+        "STP automatically selects the root bridge based on the lowest bridge priority",
+        "STP allows for multiple active paths between switches",
+        "STP uses BPDUs to exchange information between switches"
+      ],
+      "correctAnswer": "STP allows for multiple active paths between switches",
+      "explanation": "STP actually blocks redundant paths to prevent loops, allowing only one active path between switches at a time. While newer technologies like MSTP and TRILL allow multiple active paths, traditional STP does not."
+    },
+    {
+      "questionText": "A company is implementing a new VoIP system. The network administrator needs to ensure quality of service for voice traffic. Which of the following should be configured?",
+      "options": [
+        "Port mirroring on all switches",
+        "QoS with DSCP marking for voice traffic",
+        "MAC address filtering on all access points",
+        "VLAN pruning on all trunks"
+      ],
+      "correctAnswer": "QoS with DSCP marking for voice traffic",
+      "explanation": "DSCP (Differentiated Services Code Point) marking is used to prioritize voice traffic in QoS implementations, ensuring low latency and jitter for VoIP communications. This allows the network to identify and prioritize voice packets over other traffic types."
+    },
+    {
+      "questionText": "A network technician is troubleshooting a wireless network issue. Users report slow performance and frequent disconnections. The technician notices that the wireless access point is using channel 6 in the 2.4 GHz band. What should the technician do FIRST?",
+      "options": [
+        "Increase the transmit power of the access point",
+        "Perform a wireless site survey to identify a less congested channel",
+        "Enable WPA3 encryption",
+        "Update the access point firmware"
+      ],
+      "correctAnswer": "Perform a wireless site survey to identify a less congested channel",
+      "explanation": "Channel 6 is the default channel for many devices and is often congested. Performing a wireless site survey to identify a less congested channel (such as 1 or 11 in the 2.4 GHz band) should be the first step in resolving wireless interference issues."
+    },
+    {
+      "questionText": "Which of the following is NOT a characteristic of a stateful firewall?",
+      "options": [
+        "Maintains a state table of active connections",
+        "Can filter traffic based on application layer data",
+        "Operates primarily at Layer 3 and Layer 4 of the OSI model",
+        "Requires manual configuration of return traffic rules"
+      ],
+      "correctAnswer": "Requires manual configuration of return traffic rules",
+      "explanation": "Stateful firewalls automatically track and allow return traffic for established connections, unlike stateless firewalls which require manual configuration of bidirectional rules. This is one of the key advantages of stateful inspection."
+    },
+    {
+      "questionText": "A network administrator is implementing a new network design with multiple VLANs. Which of the following is the MOST secure method to allow inter-VLAN communication?",
+      "options": [
+        "Configure a Layer 3 switch with ACLs between VLANs",
+        "Use a Layer 2 switch with trunk ports",
+        "Implement a hub between VLANs",
+        "Enable VLAN trunking on all ports"
+      ],
+      "correctAnswer": "Configure a Layer 3 switch with ACLs between VLANs",
+      "explanation": "Using a Layer 3 switch with ACLs provides the most secure method for inter-VLAN communication, as it allows for traffic filtering and proper routing between VLANs while maintaining security through access control lists."
+    },
+    {
+      "questionText": "Which of the following statements about IPv6 is TRUE?",
+      "options": [
+        "IPv6 addresses are 128 bits long and written in hexadecimal notation",
+        "IPv6 requires NAT for Internet connectivity",
+        "IPv6 uses ARP for neighbor discovery",
+        "IPv6 headers are typically larger than IPv4 headers"
+      ],
+      "correctAnswer": "IPv6 addresses are 128 bits long and written in hexadecimal notation",
+      "explanation": "IPv6 addresses are indeed 128 bits long and are written in hexadecimal notation, typically in eight groups of four hexadecimal digits separated by colons. IPv6 uses NDP (not ARP) for neighbor discovery, doesn't require NAT, and has a simplified header structure."
+    },
+    {
+      "questionText": "A network technician is troubleshooting a slow network performance issue. The technician runs a packet capture and notices a large number of identical broadcast packets continuously circulating through the network. Which of the following is the MOST likely cause?",
+      "options": [
+        "A Layer 2 network loop",
+        "Incorrect subnet mask configuration",
+        "Duplicate IP addresses",
+        "Misconfigured DHCP server"
+      ],
+      "correctAnswer": "A Layer 2 network loop",
+      "explanation": "A Layer 2 network loop causes broadcast storms, resulting in identical broadcast packets continuously circulating through the network, consuming bandwidth and causing performance degradation. This typically happens when STP is disabled or misconfigured."
+    },
+    {
+      "questionText": "TRUE or FALSE: IEEE 802.1X provides port-based network access control that requires authentication before allowing devices to communicate on the network.",
+      "options": [
+        "TRUE",
+        "FALSE"
+      ],
+      "correctAnswer": "TRUE",
+      "explanation": "IEEE 802.1X is a standard for port-based network access control (PNAC) that provides an authentication mechanism for devices wishing to connect to a network. It requires authentication before a port is enabled for normal communication."
+    },
+    {
+      "questionText": "A security engineer is analyzing traffic and notices encrypted connections are being established to an unknown external IP address from multiple workstations. Which of the following tools would be BEST to identify the specific applications generating this traffic?",
+      "options": [
+        "Protocol analyzer",
+        "Port scanner",
+        "Bandwidth analyzer",
+        "Cable tester"
+      ],
+      "correctAnswer": "Protocol analyzer",
+      "explanation": "A protocol analyzer (packet sniffer) would be the best tool to identify specific applications generating the encrypted traffic as it can examine packet details including source/destination ports, timestamps, and protocols that help identify the applications in use."
+    }
+  ]
+} 

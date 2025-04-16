@@ -189,7 +189,14 @@ export default function Quiz({ quizId }) {
                 {Math.round((score / questions.length) * 100)}%
               </p>
               <p className="text-subtext dark:text-frappe-subtext0">
-                {Math.round((score / questions.length) * 100) >= 70 ? "Great job! 🌟" : "Keep practicing! 💪"}
+                {(() => {
+                  const percentage = Math.round((score / questions.length) * 100);
+                  if (percentage < 60) return "Keep practicing! 💪";
+                  if (percentage < 70) return "Good effort! 👍";
+                  if (percentage < 80) return "Well done! ✨";
+                  if (percentage < 90) return "Great job! 🌟";
+                  return "Perfect! 🏆";
+                })()}
               </p>
             </div>
           </div>

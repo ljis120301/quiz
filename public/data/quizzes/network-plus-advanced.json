@@ -1,0 +1,229 @@
+{
+  "id": "network-plus-advanced",
+  "title": "CompTIA Network+ N10-009 Advanced Practice Quiz",
+  "description": "Comprehensive practice questions covering essential topics from the CompTIA Network+ N10-009 exam",
+  "difficulty": "Mixed",
+  "icon": "🌐",
+  "questions": [
+    {
+      "questionText": "A network administrator needs to implement a technology that will allow for dynamic IP address allocation while ensuring devices maintain the same IP address over time. Which DHCP feature should be implemented?",
+      "options": [
+        "DHCP Snooping",
+        "DHCP Reservation",
+        "DHCP Helper",
+        "DHCP Relay"
+      ],
+      "correctAnswer": "DHCP Reservation",
+      "explanation": "DHCP Reservation allows administrators to assign consistent IP addresses to specific devices based on their MAC addresses, ensuring they receive the same IP addresses each time they renew their leases."
+    },
+    {
+      "questionText": "Which routing protocol uses link-state advertisements and has an administrative distance of 110?",
+      "options": [
+        "RIP",
+        "BGP",
+        "EIGRP",
+        "OSPF"
+      ],
+      "correctAnswer": "OSPF",
+      "explanation": "OSPF (Open Shortest Path First) is a link-state routing protocol with an administrative distance of 110. It uses link-state advertisements (LSAs) to build and maintain its topology database."
+    },
+    {
+      "questionText": "Which of the following cable types would be MOST appropriate for a connection between a building's main distribution frame (MDF) and an intermediate distribution frame (IDF) located 300 meters away?",
+      "options": [
+        "Cat6a UTP",
+        "Single-mode fiber",
+        "Coaxial",
+        "Multi-mode fiber OM3"
+      ],
+      "correctAnswer": "Single-mode fiber",
+      "explanation": "Single-mode fiber is designed for long-distance connections (up to many kilometers) and is the appropriate choice for a 300-meter run between an MDF and IDF. Cat6a has a maximum distance of 100 meters, multi-mode OM3 is limited to about 300 meters but with less future-proofing, and coaxial is not typically used for this application."
+    },
+    {
+      "questionText": "A technician is configuring a switch port for a VoIP phone with an attached workstation. Which of the following configurations would be MOST appropriate?",
+      "options": [
+        "Access port with a single VLAN",
+        "Trunk port with native VLAN",
+        "Access port with voice VLAN",
+        "Port channel with LACP"
+      ],
+      "correctAnswer": "Access port with voice VLAN",
+      "explanation": "When configuring a switch port for a VoIP phone with an attached workstation, an access port with voice VLAN is most appropriate. This configuration places voice traffic on the voice VLAN and data traffic from the workstation on the access VLAN, allowing for QoS prioritization of voice traffic."
+    },
+    {
+      "questionText": "Which wireless standard operates exclusively in the 5 GHz band and supports a maximum theoretical throughput of 6.9 Gbps?",
+      "options": [
+        "802.11n",
+        "802.11ac",
+        "802.11ax",
+        "802.11g"
+      ],
+      "correctAnswer": "802.11ac",
+      "explanation": "IEEE 802.11ac operates exclusively in the 5 GHz band and can achieve theoretical throughput up to 6.9 Gbps using 8 spatial streams and 160 MHz channels with 256-QAM modulation. 802.11ax (Wi-Fi 6) operates in both 2.4 GHz and 5 GHz bands, while 802.11n supports 2.4 GHz and 5 GHz with lower speeds, and 802.11g only uses 2.4 GHz."
+    },
+    {
+      "questionText": "What network device would be MOST appropriate to prevent lateral movement between segments in a zero-trust architecture?",
+      "options": [
+        "Switch with VLANs",
+        "Layer 3 switch",
+        "Next-generation firewall",
+        "Load balancer"
+      ],
+      "correctAnswer": "Next-generation firewall",
+      "explanation": "A next-generation firewall is most appropriate for preventing lateral movement in a zero-trust architecture as it can perform deep packet inspection, user identity awareness, application awareness, and micro-segmentation—all critical capabilities for enforcing zero-trust principles between network segments."
+    },
+    {
+      "questionText": "Which IEEE standard defines the operation of link aggregation to combine multiple network connections in parallel?",
+      "options": [
+        "802.1Q",
+        "802.1D",
+        "802.3ad",
+        "802.1X"
+      ],
+      "correctAnswer": "802.3ad",
+      "explanation": "IEEE 802.3ad (now incorporated into IEEE 802.1AX) defines Link Aggregation Control Protocol (LACP) which enables multiple physical links to be combined into a single logical link for increased bandwidth and redundancy."
+    },
+    {
+      "questionText": "What is the IPv6 address format typically used for link-local addresses?",
+      "options": [
+        "2000::/3",
+        "FC00::/7",
+        "FE80::/10",
+        "FF00::/8"
+      ],
+      "correctAnswer": "FE80::/10",
+      "explanation": "FE80::/10 is the prefix for IPv6 link-local addresses. These addresses are automatically configured on interfaces and are used for communication on the local link only, not routed beyond the local network segment."
+    },
+    {
+      "questionText": "A network administrator needs to ensure that sensitive data transmitted over the network cannot be intercepted and read by unauthorized parties. Which of the following would BEST address this requirement?",
+      "options": [
+        "NAC (Network Access Control)",
+        "VLAN segmentation",
+        "TLS encryption",
+        "MAC filtering"
+      ],
+      "correctAnswer": "TLS encryption",
+      "explanation": "TLS (Transport Layer Security) encryption is the best solution for protecting data confidentiality during transmission, preventing unauthorized interception and reading of sensitive information. The other options may restrict access but don't encrypt the actual data in transit."
+    },
+    {
+      "questionText": "A network engineer is designing a disaster recovery solution and needs to establish an alternate site with equipment ready to be configured in case of emergency. Which type of disaster recovery site is being implemented?",
+      "options": [
+        "Hot site",
+        "Cold site",
+        "Warm site",
+        "Mirror site"
+      ],
+      "correctAnswer": "Warm site",
+      "explanation": "A warm site is a disaster recovery location that has the necessary equipment in place but requires configuration before becoming operational. Hot sites are fully operational duplicates, cold sites provide only basic infrastructure without equipment, and mirror sites are continuously synchronized duplicates of the production environment."
+    },
+    {
+      "questionText": "Which of the following WAN connectivity options provides dedicated point-to-point connectivity with guaranteed bandwidth?",
+      "options": [
+        "MPLS",
+        "Internet VPN",
+        "Metro Ethernet",
+        "Leased line"
+      ],
+      "correctAnswer": "Leased line",
+      "explanation": "A leased line provides dedicated point-to-point connectivity with guaranteed bandwidth between two locations. While MPLS and Metro Ethernet offer high performance, they are typically shared infrastructures. Internet VPNs run over the public Internet with no bandwidth guarantees."
+    },
+    {
+      "questionText": "A network engineer is implementing a solution to prevent malicious MAC address spoofing attacks on the company's switched network. Which of the following features should be enabled?",
+      "options": [
+        "Port security",
+        "NAT",
+        "DHCP snooping",
+        "Access control lists"
+      ],
+      "correctAnswer": "Port security",
+      "explanation": "Port security allows administrators to restrict which and how many MAC addresses can communicate through a switch port, preventing MAC address spoofing attacks by limiting authorized MAC addresses per port and taking action when violations occur."
+    },
+    {
+      "questionText": "Which network troubleshooting command provides information about the route packets take to reach a destination, including latency at each hop?",
+      "options": [
+        "ping",
+        "nslookup",
+        "ipconfig",
+        "tracert/traceroute"
+      ],
+      "correctAnswer": "tracert/traceroute",
+      "explanation": "Tracert (Windows) or traceroute (Linux/Unix) shows the path packets take to reach a destination and the latency at each hop along the route, helping identify where delays or failures occur in the network path."
+    },
+    {
+      "questionText": "What is the difference between Implicit Deny and Explicit Deny in firewall configurations?",
+      "options": [
+        "Implicit Deny requires a specific rule; Explicit Deny is automatically applied",
+        "Implicit Deny logs blocked traffic; Explicit Deny does not log anything",
+        "Explicit Deny is a written rule; Implicit Deny exists by default without being written",
+        "There is no difference; the terms are interchangeable"
+      ],
+      "correctAnswer": "Explicit Deny is a written rule; Implicit Deny exists by default without being written",
+      "explanation": "Explicit Deny refers to a rule specifically written to deny certain traffic, while Implicit Deny is the default behavior at the end of an access control list where anything not explicitly permitted is denied without requiring a written rule."
+    },
+    {
+      "questionText": "An organization needs to implement a wireless network supporting both legacy devices and new high-performance clients. Which of the following would be the MOST appropriate configuration?",
+      "options": [
+        "Single 2.4 GHz network with WPA3-SAE",
+        "Single 5 GHz network with WPA2-Enterprise",
+        "Dual-band network with WPA2/WPA3 transition mode",
+        "5 GHz only with open authentication"
+      ],
+      "correctAnswer": "Dual-band network with WPA2/WPA3 transition mode",
+      "explanation": "A dual-band network with WPA2/WPA3 transition mode provides compatibility for legacy devices on 2.4 GHz with WPA2 while allowing newer devices to connect via 5 GHz and WPA3, offering the best balance of performance, compatibility, and security."
+    },
+    {
+      "questionText": "Which network monitoring protocol uses UDP port 161 for polling and can retrieve information from network devices using OIDs?",
+      "options": [
+        "SNMP",
+        "SysLog",
+        "NetFlow",
+        "RMON"
+      ],
+      "correctAnswer": "SNMP",
+      "explanation": "SNMP (Simple Network Management Protocol) uses UDP port 161 for polling devices and retrieving information via OIDs (Object Identifiers). It's commonly used for monitoring network devices and collecting performance statistics."
+    },
+    {
+      "questionText": "During a site assessment, a wireless engineer needs to identify the optimal placement for access points. Which tool would be MOST useful for this task?",
+      "options": [
+        "Protocol analyzer",
+        "Tone generator",
+        "Heat map generator",
+        "Cable certifier"
+      ],
+      "correctAnswer": "Heat map generator",
+      "explanation": "A heat map generator is the most useful tool for determining optimal access point placement as it provides a visual representation of wireless signal coverage, helping identify areas with strong and weak signals throughout the facility."
+    },
+    {
+      "questionText": "A network technician is troubleshooting a connectivity issue and suspects there might be a bandwidth bottleneck. Which command would be MOST useful to analyze current network connections and their utilization?",
+      "options": [
+        "ping",
+        "netstat",
+        "tracert",
+        "nslookup"
+      ],
+      "correctAnswer": "netstat",
+      "explanation": "Netstat displays active TCP connections, ports on which the computer is listening, Ethernet statistics, the IP routing table, and IPv4/IPv6 statistics, making it useful for analyzing current network connections and potential bandwidth bottlenecks."
+    },
+    {
+      "questionText": "What type of attack attempts to exhaust the connection state table in stateful packet inspection firewalls?",
+      "options": [
+        "ARP poisoning",
+        "VLAN hopping",
+        "SYN flood",
+        "DNS cache poisoning"
+      ],
+      "correctAnswer": "SYN flood",
+      "explanation": "A SYN flood attack works by sending numerous SYN packets but never completing the TCP three-way handshake, causing the firewall to maintain half-open connections until its state table fills up, potentially preventing legitimate connections."
+    },
+    {
+      "questionText": "Which of the following is NOT typically a responsibility of the data plane in a software-defined network (SDN)?",
+      "options": [
+        "Packet forwarding",
+        "Determining routing paths",
+        "Traffic filtering",
+        "QoS enforcement"
+      ],
+      "correctAnswer": "Determining routing paths",
+      "explanation": "Determining routing paths is a function of the control plane in SDN, not the data plane. The data plane is responsible for actual packet forwarding, traffic filtering, and QoS enforcement based on instructions from the control plane."
+    }
+  ]
+} 

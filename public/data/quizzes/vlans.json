@@ -1,0 +1,113 @@
+{
+  "id": "vlans",
+  "title": "VLANs Quiz",
+  "description": "Test your knowledge of VLANs",
+  "difficulty": "Easy",
+  "icon": "🌐",
+  "questions": [
+    {
+      "questionText": "What is the primary purpose of a VLAN?",
+      "options": [
+        "To create separate broadcast domains within a single physical network",
+        "To increase network speed",
+        "To provide wireless connectivity",
+        "To replace routers"
+      ],
+      "correctAnswer": "To create separate broadcast domains within a single physical network",
+      "explanation": "VLANs create logical broadcast domains within a single physical network, allowing for better network segmentation and security."
+    },
+    {
+      "questionText": "True or False: VLANs can span across multiple switches.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "VLANs can span across multiple switches using trunk ports and VLAN tagging protocols like 802.1Q."
+    },
+    {
+      "questionText": "Which protocol is commonly used for VLAN tagging?",
+      "options": [
+        "802.1Q",
+        "802.11",
+        "802.3",
+        "802.5"
+      ],
+      "correctAnswer": "802.1Q",
+      "explanation": "802.1Q is the standard protocol used for VLAN tagging, which adds a 4-byte tag to Ethernet frames."
+    },
+    {
+      "questionText": "A network administrator needs to configure a switch port to carry traffic for multiple VLANs. What type of port should they configure?",
+      "options": [
+        "Trunk port",
+        "Access port",
+        "Native port",
+        "Management port"
+      ],
+      "correctAnswer": "Trunk port",
+      "explanation": "Trunk ports are configured to carry traffic for multiple VLANs between switches."
+    },
+    {
+      "questionText": "True or False: VLANs provide complete security isolation between different departments.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "False",
+      "explanation": "While VLANs provide logical separation, additional security measures like firewalls and access control lists are needed for complete security isolation."
+    },
+    {
+      "questionText": "What is the default VLAN number on most switches?",
+      "options": [
+        "VLAN 1",
+        "VLAN 0",
+        "VLAN 100",
+        "VLAN 4096"
+      ],
+      "correctAnswer": "VLAN 1",
+      "explanation": "VLAN 1 is the default VLAN on most switches and cannot be deleted."
+    },
+    {
+      "questionText": "A company has three departments: Sales, Marketing, and IT. Each department needs its own network segment. How many VLANs should be created?",
+      "options": [
+        "3 VLANs",
+        "2 VLANs",
+        "4 VLANs",
+        "1 VLAN"
+      ],
+      "correctAnswer": "3 VLANs",
+      "explanation": "Each department should have its own VLAN for proper network segmentation."
+    },
+    {
+      "questionText": "True or False: VLANs can help reduce broadcast traffic on a network.",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correctAnswer": "True",
+      "explanation": "VLANs create separate broadcast domains, which helps reduce broadcast traffic by limiting it to only the devices within the same VLAN."
+    },
+    {
+      "questionText": "What is the maximum number of VLANs that can be created on a switch using 802.1Q?",
+      "options": [
+        "4096",
+        "1024",
+        "2048",
+        "8192"
+      ],
+      "correctAnswer": "4096",
+      "explanation": "The 802.1Q standard allows for 4096 VLANs (0-4095), though VLAN 0 and 4095 are reserved."
+    },
+    {
+      "questionText": "A network administrator notices that devices in different VLANs cannot communicate. What device is needed to enable communication between these VLANs?",
+      "options": [
+        "Router",
+        "Switch",
+        "Hub",
+        "Bridge"
+      ],
+      "correctAnswer": "Switch",
+      "explanation": "A router (or Layer 3 switch) is required to enable communication between different VLANs, as VLANs are separate broadcast domains."
+    }
+  ]
+}
