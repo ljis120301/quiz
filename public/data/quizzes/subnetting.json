@@ -1,0 +1,141 @@
+{
+  "id": "subnetting",
+  "title": "Network+ Subnetting Practice Quiz",
+  "description": "Test your knowledge of IP addressing and subnetting concepts essential for the CompTIA Network+ N10-009 exam",
+  "difficulty": "Medium",
+  "icon": "🔢",
+  "questions": [
+    {
+      "questionText": "What is the subnet mask in dotted decimal notation for a /27 prefix?",
+      "options": [
+        "255.255.255.0",
+        "255.255.255.128",
+        "255.255.255.192",
+        "255.255.255.224"
+      ],
+      "correctAnswer": "255.255.255.224",
+      "explanation": "A /27 prefix has 27 network bits and 5 host bits. The subnet mask is calculated as 255.255.255.224 (11111111.11111111.11111111.11100000 in binary)."
+    },
+    {
+      "questionText": "How many usable host addresses are available in a /29 subnet?",
+      "options": [
+        "2",
+        "6",
+        "8",
+        "14"
+      ],
+      "correctAnswer": "6",
+      "explanation": "A /29 prefix has 3 host bits (32-29=3). The formula for calculating usable hosts is 2^host bits - 2, so 2^3 - 2 = 8 - 2 = 6 usable host addresses."
+    },
+    {
+      "questionText": "Which of the following is the broadcast address for the subnet 192.168.10.64/26?",
+      "options": [
+        "192.168.10.64",
+        "192.168.10.127",
+        "192.168.10.128",
+        "192.168.10.255"
+      ],
+      "correctAnswer": "192.168.10.127",
+      "explanation": "A /26 network has a subnet mask of 255.255.255.192. The network address is 192.168.10.64, and with 6 host bits, the broadcast address is 192.168.10.127 (network address + 2^host bits - 1)."
+    },
+    {
+      "questionText": "What is the CIDR notation for a subnet mask of 255.255.254.0?",
+      "options": [
+        "/16",
+        "/23",
+        "/24",
+        "/25"
+      ],
+      "correctAnswer": "/23",
+      "explanation": "The subnet mask 255.255.254.0 in binary is 11111111.11111111.11111110.00000000, which has 23 network bits. Therefore, the CIDR notation is /23."
+    },
+    {
+      "questionText": "A company needs to divide a /24 network into 6 equal subnets. What is the appropriate subnet mask for this scenario?",
+      "options": [
+        "/25",
+        "/26",
+        "/27",
+        "/28"
+      ],
+      "correctAnswer": "/27",
+      "explanation": "To create at least 6 subnets from a /24 network, you need at least 3 subnet bits (2^3 = 8 subnets). Adding 3 bits to /24 gives you /27 (255.255.255.224)."
+    },
+    {
+      "questionText": "What is the network address for the host 172.16.45.173/20?",
+      "options": [
+        "172.16.0.0",
+        "172.16.32.0",
+        "172.16.45.0",
+        "172.16.32.173"
+      ],
+      "correctAnswer": "172.16.32.0",
+      "explanation": "A /20 network has a subnet mask of 255.255.240.0. When applied to 172.16.45.173, the network address is 172.16.32.0."
+    },
+    {
+      "questionText": "What is the purpose of VLSM (Variable Length Subnet Masking)?",
+      "options": [
+        "To create subnets of different sizes from a single address space",
+        "To increase the security of IP addressing",
+        "To convert IPv4 addresses to IPv6 addresses",
+        "To provide automatic IP assignment to network devices"
+      ],
+      "correctAnswer": "To create subnets of different sizes from a single address space",
+      "explanation": "VLSM allows network administrators to create subnets of different sizes from a single address space, optimizing address allocation based on actual host requirements."
+    },
+    {
+      "questionText": "Which IP address represents a valid host IP in the subnet 192.168.15.192/28?",
+      "options": [
+        "192.168.15.191",
+        "192.168.15.192",
+        "192.168.15.193",
+        "192.168.15.208"
+      ],
+      "correctAnswer": "192.168.15.193",
+      "explanation": "For the subnet 192.168.15.192/28, the network address is 192.168.15.192 and the broadcast address is 192.168.15.207. A valid host IP must fall between these two addresses, making 192.168.15.193 the only valid option listed."
+    },
+    {
+      "questionText": "What does the 'magic number' represent when using magic number subnetting?",
+      "options": [
+        "The number of available host addresses",
+        "The CIDR prefix length",
+        "The interval between subnets in an octet",
+        "The default gateway address"
+      ],
+      "correctAnswer": "The interval between subnets in an octet",
+      "explanation": "The magic number is the interval value between subnet ranges, calculated as 256 minus the subnet mask's interesting octet. It helps to quickly identify subnet boundaries."
+    },
+    {
+      "questionText": "How many total addresses (including network and broadcast addresses) are in a /29 subnet?",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "16"
+      ],
+      "correctAnswer": "8",
+      "explanation": "A /29 subnet has 3 host bits (32-29=3). The total number of addresses is 2^host bits, so 2^3 = 8 total addresses, which includes the network and broadcast addresses."
+    },
+    {
+      "questionText": "If a network requires 500 host addresses, what is the minimum subnet mask that can accommodate this requirement?",
+      "options": [
+        "/22",
+        "/23",
+        "/24",
+        "/25"
+      ],
+      "correctAnswer": "/23",
+      "explanation": "For 500 host addresses, you need at least 9 host bits (2^9 = 512), which means a /23 subnet mask (32-9=23) is the minimum required to accommodate these hosts."
+    },
+    {
+      "questionText": "What is the first usable host address in the subnet 10.0.0.0/22?",
+      "options": [
+        "10.0.0.0",
+        "10.0.0.1",
+        "10.0.1.1",
+        "10.0.4.1"
+      ],
+      "correctAnswer": "10.0.0.1",
+      "explanation": "For the subnet 10.0.0.0/22, the network address is 10.0.0.0. The first usable host address is always the network address + 1, which is 10.0.0.1."
+    }
+  ]
+} 

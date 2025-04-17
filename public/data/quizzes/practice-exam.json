@@ -1,0 +1,120 @@
+{
+    "id": "networkplus-n10009",
+    "title": "CompTIA Network+ N10-009 Practice Quiz (Advanced)",
+    "description": "Challenge your understanding of the CompTIA Network+ N10-009 exam objectives with this difficult-level quiz.",
+    "difficulty": "Hard",
+    "icon": "🧠",   
+    "questions": [
+      {
+        "questionText": "Which of the following best describes the function of a network security group (NSG) in a cloud environment?",
+        "options": [
+          "It provides DNS resolution for virtual machines.",
+          "It acts as a virtual firewall to control inbound and outbound traffic.",
+          "It manages user authentication and authorization.",
+          "It facilitates load balancing across multiple servers."
+        ],
+        "correctAnswer": "It acts as a virtual firewall to control inbound and outbound traffic.",
+        "explanation": "A Network Security Group (NSG) functions as a virtual firewall in cloud environments, controlling inbound and outbound traffic based on defined security rules."
+      },
+      {
+        "questionText": "What is the primary purpose of implementing a switch virtual interface (SVI) on a managed switch?",
+        "options": [
+          "To enable VLAN tagging on trunk ports.",
+          "To provide Layer 3 routing capabilities between VLANs.",
+          "To assign MAC addresses to VLANs.",
+          "To monitor traffic statistics on individual ports."
+        ],
+        "correctAnswer": "To provide Layer 3 routing capabilities between VLANs.",
+        "explanation": "A Switch Virtual Interface (SVI) allows for Layer 3 routing between VLANs on a managed switch, facilitating inter-VLAN communication."
+      },
+      {
+        "questionText": "Which of the following protocols is commonly used to automate the configuration of network devices using a client-server model?",
+        "options": [
+          "SNMP",
+          "NetFlow",
+          "DHCP",
+          "TFTP"
+        ],
+        "correctAnswer": "DHCP",
+        "explanation": "Dynamic Host Configuration Protocol (DHCP) automates the assignment of IP addresses and other network configurations to devices on a network."
+      },
+      {
+        "questionText": "In the context of network security, what is the primary function of implementing port security on a switch?",
+        "options": [
+          "To encrypt data transmitted over the network.",
+          "To prevent unauthorized devices from connecting to the network.",
+          "To assign dynamic IP addresses to devices.",
+          "To monitor traffic for malicious activity."
+        ],
+        "correctAnswer": "To prevent unauthorized devices from connecting to the network.",
+        "explanation": "Port security restricts access to a switch port based on MAC addresses, preventing unauthorized devices from connecting to the network."
+      },
+      {
+        "questionText": "A user reports intermittent connectivity issues. Upon investigation, you notice a high number of CRC errors on the switch port. What is the most probable cause?",
+        "options": [
+          "Incorrect VLAN assignment",
+          "Faulty network cable",
+          "Duplicate IP address",
+          "Misconfigured subnet mask"
+        ],
+        "correctAnswer": "Faulty network cable",
+        "explanation": "Cyclic Redundancy Check (CRC) errors often indicate physical layer issues, such as a faulty or damaged network cable."
+      },
+      {
+        "questionText": "Which IPv6 address type is used to communicate with all nodes on a local network segment?",
+        "options": [
+          "Global Unicast",
+          "Link-Local",
+          "Multicast",
+          "Anycast"
+        ],
+        "correctAnswer": "Multicast",
+        "explanation": "IPv6 multicast addresses are used to send a single packet to multiple destinations on a local network segment."
+      },
+      {
+        "questionText": "What is the primary benefit of using Infrastructure as Code (IaC) in network deployments?",
+        "options": [
+          "Enhanced physical security of network devices",
+          "Automated and consistent configuration management",
+          "Improved wireless signal strength",
+          "Reduced need for network segmentation"
+        ],
+        "correctAnswer": "Automated and consistent configuration management",
+        "explanation": "Infrastructure as Code (IaC) enables automated and consistent deployment and management of network configurations through code."
+      },
+      {
+        "questionText": "Which of the following is a key characteristic of a zero trust security model?",
+        "options": [
+          "All users are trusted by default.",
+          "Access is granted based on network location.",
+          "Continuous verification of user identity and device health.",
+          "Perimeter-based security controls are sufficient."
+        ],
+        "correctAnswer": "Continuous verification of user identity and device health.",
+        "explanation": "Zero trust security requires continuous verification of user identities and device health, regardless of their location within the network."
+      },
+      {
+        "questionText": "Which protocol is commonly used to securely manage and configure network devices over an unsecured network?",
+        "options": [
+          "Telnet",
+          "SSH",
+          "FTP",
+          "HTTP"
+        ],
+        "correctAnswer": "SSH",
+        "explanation": "Secure Shell (SSH) provides encrypted communication for securely managing and configuring network devices over unsecured networks."
+      },
+      {
+        "questionText": "You are troubleshooting a network issue and suspect a problem with the routing table. Which command would you use on a Windows system to view the routing table?",
+        "options": [
+          "ipconfig",
+          "tracert",
+          "route print",
+          "netstat"
+        ],
+        "correctAnswer": "route print",
+        "explanation": "The 'route print' command on Windows displays the current routing table, aiding in network troubleshooting."
+      }
+    ]
+}
+  

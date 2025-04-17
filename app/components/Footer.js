@@ -72,7 +72,7 @@ export default function Footer() {
         
         <div className="mt-8 pt-6 border-t border-gray-100 dark:border-frappe-surface1">
           <p className="text-center text-sm text-gray-500 dark:text-frappe-subtext0">
-            © {new Date().getFullYear()} Net Quiz. All rights reserved.
+           Hi r/CompTIA
           </p>
         </div>
       </div>
